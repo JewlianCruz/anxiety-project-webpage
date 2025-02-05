@@ -1,55 +1,208 @@
-/* There's some sample CSS here which you can use or nuke as you like */
-
-html {
-  /* Make #id links scroll smoothly */
-  scroll-behavior: smooth;
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  /* Change to something you like, but please do customize the font! */
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  line-height: 1.4;
-  /* reset default margins */
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f2f6f9;
+  color: #333;
 }
 
-.hero {
-  box-sizing: border-box;
-  /* Full screen hero section */
-  width: 100%;
-  height: 100dvh;
-  /* Center the content vertically and horizontally */
-  display: grid;
-  place-content: center;
-  /* Custom text and stuff */
-  background: #0033a0;
+/* Header Styles */
+header {
+  background-color: #4e9f3d;
   color: white;
-  font-family: Futura;
-  font-weight: bold;
-  font-size: 70px;
+  padding: 20px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #3a9e93;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #e63946;
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+  background-color: #d62828;
+  transform: translateY(-2px);
+}
+
+/* About Section */
+.about {
+  background-color: white;
+  padding: 50px 20px;
   text-align: center;
 }
-.hero a {
+
+.info-animation .pulse-animation {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #4e9f3d;
+  animation: pulse 2s infinite;
+  margin: 20px auto;
+}
+
+/* Breathing Circle Animation */
+.breathing {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.breathing-circle {
+  position: relative;
+  display: inline-block;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #e63946;
+  margin: 0 auto;
+  animation: breathe 4s infinite;
+}
+
+.instructions {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Mindfulness Section */
+.mindfulness {
+  background-color: #f4f4f4;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.mindfulness a {
+  text-decoration: none;
   color: white;
-  text-decoration: underline;
-  text-decoration-color: #c6093b;
+  background-color: #4e9f3d;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-size: 1.2rem;
 }
 
-/* A little "activation" to demonstrate JS is working in the template */
-.hero {
-  transition: background 0.5s;
-}
-.hero.active {
-  background: #c6093b;
+.mindfulness a:hover {
+  background-color: #2b6b2f;
 }
 
-main {
-  /* Make sure our content can scroll the hero away */
-  min-height: 100dvh;
-  max-width: 35em; /* choose a width for text */
-  line-height: 1.8; /* choose a line spacing */
-  font-size: 18px; /* choose a font size */
-  margin: 0 auto; /* center the content */
+/* Resources Section */
+.resources {
+  padding: 50px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.resources ul {
+  list-style: none;
+  padding: 0;
+}
+
+.resources ul li {
+  margin-bottom: 10px;
+}
+
+.resources ul li a {
+  text-decoration: none;
+  color: #4e9f3d;
+  font-size: 1.2rem;
+}
+
+.resources ul li a:hover {
+  color: #d62828;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes breathe {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

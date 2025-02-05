@@ -1,33 +1,78 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Example Student's Portfolio</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <!-- Demo content -->
-    <section class="hero">
-      <h1>Example Student's Portfolio</h1>
-      <a href="#about-me" class="cta">Learn More</a>
-    </section>
-    <main>
-      <section class="info" id="about-me">
-        <div class="about-me">
-          <h2>About Me</h2>
-          <p>
-            Lorem ipsum fill in some text here about yourself... I'm just going
-            to write enough filler text here so that we can see text-wrapping in
-            action so we can make sure our paragraph text looks good in
-            paragraphs.
-          </p>
-        </div>
-      </section>
-      <section class="sample-work" id="cyoa">
-        <h2>My Choose-Your-Own Adventure Project</h2>
-        <p>For example a project could go here...</p>
-      </section>
-    </main>
-  </body>
-  <!-- Keep the script at the bottom of your file -->
-  <script src="main.js"></script>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calm Your Anxiety</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header with navigation -->
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="#">Calm Your Anxiety</a>
+      </div>
+      <ul>
+        <li><a href="#about">About Anxiety</a></li>
+        <li><a href="#breathing">Breathing Exercise</a></li>
+        <li><a href="#mindfulness">Mindfulness</a></li>
+        <li><a href="#resources">Resources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section (Calming Animation) -->
+  <section class="hero">
+    <h1>Welcome to Calm Your Anxiety</h1>
+    <p>Your journey towards peace begins here. Explore tools to understand and manage anxiety.</p>
+    <a href="#breathing" class="cta-button">Start Breathing Exercise</a>
+  </section>
+
+  <!-- About Anxiety Section -->
+  <section id="about" class="about">
+    <h2>What is Anxiety?</h2>
+    <p>Anxiety is a feeling of worry, nervousness, or unease. It's natural to feel anxious, but when it becomes overwhelming, it can affect daily life.</p>
+    <p>Learn more about the types of anxiety disorders, their symptoms, and how they can impact your body and mind.</p>
+    <div class="info-animation">
+      <div class="pulse-animation"></div>
+    </div>
+  </section>
+
+  <!-- Breathing Exercise Section -->
+  <section id="breathing" class="breathing">
+    <h2>Breathing Exercise</h2>
+    <p>Focus on your breath to reduce stress and anxiety. Follow the animation below to guide your breathing.</p>
+    <div class="breathing-circle">
+      <div class="circle"></div>
+      <p class="instructions">Breathe In</p>
+    </div>
+  </section>
+
+  <!-- Mindfulness Section -->
+  <section id="mindfulness" class="mindfulness">
+    <h2>Mindfulness Techniques</h2>
+    <p>Take a moment to focus on the present. Engage in calming exercises to help ground yourself.</p>
+    <div class="mindfulness-video">
+      <p>Click the button below to start a short mindfulness meditation.</p>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="cta-button">Start Guided Meditation</a>
+    </div>
+  </section>
+
+  <!-- Support Resources Section -->
+  <section id="resources" class="resources">
+    <h2>Resources for Support</h2>
+    <ul>
+      <li><a href="https://www.adaa.org" target="_blank">Anxiety and Depression Association of America</a></li>
+      <li><a href="https://www.nami.org" target="_blank">National Alliance on Mental Illness</a></li>
+      <li><a href="https://www.samhsa.gov" target="_blank">SAMHSA: Substance Abuse and Mental Health Services</a></li>
+    </ul>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>© 2025 Calm Your Anxiety. All Rights Reserved.</p>
+  </footer>
+
+</body>
 </html>
