@@ -3,20 +3,26 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  background-color: #f2f6f9;
+  background-color: #f7f7f7;
   color: #333;
+  line-height: 1.7;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 /* Header Styles */
 header {
-  background-color: #4e9f3d;
+  background-color: #2d6a4f;
   color: white;
-  padding: 20px 0;
+  padding: 30px 0;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 nav {
@@ -34,13 +40,23 @@ nav ul {
 }
 
 nav ul li {
-  margin-left: 20px;
+  margin-left: 35px;
 }
 
 nav ul li a {
   text-decoration: none;
   color: white;
   font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f0a500;
+  transform: translateY(-4px);
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Hero Section */
@@ -50,45 +66,77 @@ nav ul li a {
   text-align: center;
   padding: 100px 20px;
   animation: fadeIn 3s ease-in-out;
+  background-image: url('your-image-url-here.jpg');
+  background-size: cover;
+  background-position: center;
+  border-bottom: 8px solid #2d6a4f;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3);
 }
 
 .hero p {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-bottom: 30px;
+  font-weight: 300;
 }
 
 .cta-button {
-  background-color: #e63946;
+  background-color: #f0a500;
   color: white;
-  padding: 12px 30px;
+  padding: 16px 48px;
   text-decoration: none;
-  font-size: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1.4rem;
+  border-radius: 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #d62828;
-  transform: translateY(-2px);
+  background-color: #f09c00;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
 /* About Section */
 .about {
-  background-color: white;
-  padding: 50px 20px;
+  background-color: #ffffff;
+  padding: 80px 20px;
   text-align: center;
+  max-width: 1200px;
+  margin: 60px auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #2d6a4f;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.about p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  line-height: 1.9;
+  color: #555;
 }
 
 .info-animation .pulse-animation {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
-  background-color: #4e9f3d;
+  background-color: #2d6a4f;
   animation: pulse 2s infinite;
   margin: 20px auto;
 }
@@ -96,7 +144,17 @@ nav ul li a {
 /* Breathing Circle Animation */
 .breathing {
   text-align: center;
-  padding: 50px 20px;
+  padding: 80px 20px;
+  background-color: #ffffff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.breathing h2 {
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+  color: #2d6a4f;
+  font-weight: 700;
 }
 
 .breathing-circle {
@@ -105,45 +163,80 @@ nav ul li a {
 }
 
 .circle {
-  width: 200px;
-  height: 200px;
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
-  background-color: #e63946;
+  background-color: #f0a500;
   margin: 0 auto;
   animation: breathe 4s infinite;
 }
 
 .instructions {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #333;
   margin-top: 20px;
+  font-weight: 500;
 }
 
 /* Mindfulness Section */
 .mindfulness {
   background-color: #f4f4f4;
-  padding: 50px 20px;
+  padding: 100px 20px;
   text-align: center;
+  max-width: 1200px;
+  margin: 60px auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.mindfulness h2 {
+  font-size: 2.8rem;
+  color: #2d6a4f;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.mindfulness p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  line-height: 1.9;
+  color: #555;
 }
 
 .mindfulness a {
   text-decoration: none;
   color: white;
-  background-color: #4e9f3d;
-  padding: 12px 30px;
-  border-radius: 5px;
-  font-size: 1.2rem;
+  background-color: #2d6a4f;
+  padding: 16px 48px;
+  border-radius: 30px;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
 }
 
 .mindfulness a:hover {
-  background-color: #2b6b2f;
+  background-color: #1e4d3b;
+  transform: translateY(-4px);
 }
 
 /* Resources Section */
 .resources {
-  padding: 50px 20px;
+  padding: 100px 20px;
   background-color: #ffffff;
   text-align: center;
+  max-width: 1200px;
+  margin: 60px auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.resources h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #2d6a4f;
+  font-weight: 700;
 }
 
 .resources ul {
@@ -152,25 +245,31 @@ nav ul li a {
 }
 
 .resources ul li {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .resources ul li a {
   text-decoration: none;
-  color: #4e9f3d;
-  font-size: 1.2rem;
+  color: #2d6a4f;
+  font-size: 1.3rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 .resources ul li a:hover {
-  color: #d62828;
+  color: #f0a500;
+  transform: translateX(5px);
 }
 
 /* Footer */
 footer {
   background-color: #333;
   color: white;
-  padding: 20px;
+  padding: 30px 20px;
   text-align: center;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-top: 60px;
 }
 
 /* Keyframe Animations */
