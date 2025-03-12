@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calm Your Anxiety</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
+
   <header>
     <nav>
       <div class="logo">
@@ -14,75 +16,57 @@
       </div>
       <ul>
         <li><a href="#about">About Anxiety</a></li>
-        <li><a href="#breathing">Breathing Exercise</a></li>
-        <li><a href="#mindfulness">Mindfulness</a></li>
+        <li><a href="#breathing">Breathing Guide</a></li>
+        <li><a href="#mindfulness">Meditation Guide</a></li>
         <li><a href="#resources">Resources</a></li>
       </ul>
     </nav>
   </header>
 
   <section class="hero">
-    <h1>Welcome to Calm Your Anxiety</h1>
-    <p>Your journey towards peace begins here. Explore tools to understand and manage anxiety.</p>
+    <h1>Find Your Calm</h1>
+    <p id="affirmation-text">Take a deep breath—you're in a safe space.</p>
     <a href="#breathing" class="cta-button">Start Breathing Exercise</a>
   </section>
 
   <section id="about" class="about">
-    <h2>What is Anxiety?</h2>
-    <p>Anxiety is a feeling of worry, nervousness, or unease. It's natural to feel anxious, but when it becomes overwhelming, it can affect daily life.</p>
-    <p>Learn more about the types of anxiety disorders, their symptoms, and how they can impact your body and mind.</p>
-    <div class="info-animation">
-      <div class="pulse-animation"></div>
-    </div>
+    <h2>Understanding Anxiety</h2>
+    <p>Anxiety is a natural response to stress, but when it feels overwhelming, it can interfere with daily life.</p>
+    <p>Learn about the symptoms, causes, and how you can manage it.</p>
   </section>
 
   <section id="breathing" class="breathing">
     <h2>Breathing Exercise</h2>
-    <p>Focus on your breath to reduce stress and anxiety. Follow the animation below to guide your breathing.</p>
-    <div class="breathing-circle">
-      <div class="circle"></div>
-      <p class="instructions">Breathe In</p>
+    <p>This guided breathing exercise helps calm the mind and body.</p>
+
+    <p id="breathing-countdown" class="countdown-text">Get ready...</p>
+
+    <div class="breathing-overlay" id="breathing-overlay">
+      <p class="instructions" id="breathing-instruction">Breathe In...</p>
     </div>
-    <button id="startBreathingButton" class="cta-button">Start Breathing Exercise</button>
+
+    <div class="breathing-circle" id="breathing-circle">
+      <div class="circle"></div>
+    </div>
+
+    <button id="startBreathingButton" class="cta-button">Start Exercise</button>
+    <button id="stopBreathingButton" class="cta-button" style="display:none;">Stop</button>
   </section>
 
   <section id="mindfulness" class="mindfulness">
-    <h2>Mindfulness Techniques</h2>
-    <p>Take a moment to focus on the present. Engage in calming exercises to help ground yourself.</p>
-    <div class="mindfulness-video">
-      <p>Click the button below to start a short mindfulness meditation focused on breathing.</p>
-      <a href="https://www.youtube.com/watch?v=YzRUEmqDJd8" target="_blank" class="cta-button">Start Guided Meditation</a>
-    </div>
+    <h2>Guided Meditation</h2>
+    <p>Focus on the present with this short meditation.</p>
+    <a href="https://www.youtube.com/watch?v=YzRUEmqDJd8" target="_blank" class="cta-button">Start Meditation</a>
   </section>
 
   <section id="resources" class="resources">
-    <h2>Resources for Support</h2>
+    <h2>Helpful Resources</h2>
     <ul>
-      <li><a href="https://www.adaa.org" target="_blank">Anxiety and Depression Association of America</a></li>
+      <li><a href="https://www.adaa.org" target="_blank">Anxiety and Depression Association</a></li>
       <li><a href="https://www.nami.org" target="_blank">National Alliance on Mental Illness</a></li>
-      <li><a href="https://www.samhsa.gov" target="_blank">SAMHSA: Substance Abuse and Mental Health Services</a></li>
+      <li><a href="https://www.samhsa.gov" target="_blank">SAMHSA Mental Health Services</a></li>
     </ul>
   </section>
 
-  <!-- Anxiety Test Section -->
-  <section id="anxietyTest">
-    <h2>Take the Anxiety Test</h2>
-    <form id="anxietyQuiz">
-      <label>How often do you feel nervous or anxious?</label><br>
-      <input type="radio" name="q1" value="5"> Very Often<br>
-      <input type="radio" name="q1" value="3"> Sometimes<br>
-      <input type="radio" name="q1" value="1"> Rarely<br><br>
-
-      <label>Do you find it difficult to control your worries?</label><br>
-      <input type="radio" name="q2" value="5"> Yes<br>
-      <input type="radio" name="q2" value="3"> Occasionally<br>
-      <input type="radio" name="q2" value="1"> No<br><br>
-
-      <button type="submit" class="cta-button">Submit</button>
-    </form>
-    <div id="result"></div>
-  </section>
-
-  <script src="script.js"></script>
 </body>
 </html>
