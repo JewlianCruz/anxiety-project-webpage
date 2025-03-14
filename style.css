@@ -1,154 +1,151 @@
-/* Reset Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
-}
-
 /* General Styles */
 body {
-  background-color: #f0f8ff;
-  color: #333;
-  line-height: 1.6;
-  text-align: center;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    text-align: center;
+    color: #333;
 }
 
-/* Navigation */
 header {
-  background-color: #4a90e2;
-  padding: 15px 0;
+    background-color: #00796b;
+    color: white;
+    padding: 20px;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
 }
 
 nav ul {
-  list-style: none;
-  display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
 }
 
 nav ul li {
-  margin-left: 20px;
+    display: inline;
+    margin-right: 20px;
 }
 
 nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* Hero Section */
-.hero {
-  background-color: #87CEFA;
-  padding: 80px 20px;
-  color: white;
+nav ul li a:hover {
+    color: #d32f2f;
 }
 
-.hero h1 {
-  font-size: 36px;
-}
-
-.hero p {
-  font-size: 20px;
-  margin: 20px 0;
-}
-
-/* Sections */
 section {
-  padding: 50px 20px;
+    padding: 40px;
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Buttons */
-.cta-button {
-  display: inline-block;
-  padding: 12px 25px;
-  background-color: #4a90e2;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 18px;
-  margin-top: 20px;
-  transition: background 0.3s;
+button {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    border-radius: 5px;
 }
 
-.cta-button:hover {
-  background-color: #357ABD;
+button:hover {
+    background-color: #004d40;
 }
 
-/* Countdown Text */
-.countdown-text {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #4a90e2;
-  margin-top: 20px;
+/* Breathing Exercise Styles */
+#breathing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    margin-top: 20px;
 }
 
-/* Breathing Overlay - Covers Whole Screen */
-.breathing-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(135, 206, 250, 0.8);
-  border-radius: 50%;
-  transform: scale(0);
-  transition: transform 4s ease-in-out;
+#breathing-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #00796b;
+    transition: transform 4s ease-in-out;
 }
 
-.breathing-overlay.active {
-  display: block;
-  transform: scale(1);
-}
-
-.instructions {
-  color: white;
-  font-size: 2rem;
-  font-weight: bold;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Breathing Circle */
-.breathing-circle {
-  position: relative;
-  margin: 30px auto;
-}
-
-.circle {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: #ffcccb;
-  margin: auto;
-  animation: breathe 6s infinite;
-}
-
+/* Breathing Animation */
 @keyframes breathe {
-  0% { transform: scale(1); opacity: 0.8; }
-  50% { transform: scale(1.2); opacity: 1; }
-  100% { transform: scale(1); opacity: 0.8; }
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3); /* Breathing in (circle enlarges) */
+    }
+    100% {
+        transform: scale(1); /* Breathing out (circle shrinks) */
+    }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    text-align: center;
-  }
-  nav ul {
-    flex-direction: column;
-  }
-  nav ul li {
-    margin: 10px 0;
-  }
+/* The circle element for the breathing animation */
+#breathing-circle {
+    width: 150px;
+    height: 150px;
+    background-color: #0099cc;
+    border-radius: 50%;
+    animation: breathe 4s ease-in-out infinite; /* Apply animation immediately */
+    margin: 0 auto;
+}
+
+/* Center the circle within the container */
+#breathing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+/* Video Container */
+.video-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Resources Section */
+#resources ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#resources ul li {
+    margin-bottom: 15px;
+}
+
+#resources ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #00796b;
+    font-weight: bold;
+}
+
+#resources ul li a:hover {
+    color: #d32f2f;
+}
+
+/* Footer */
+footer {
+    padding: 10px;
+    background-color: #00796b;
+    color: white;
+    margin-top: 40px;
+    font-size: 14px;
 }

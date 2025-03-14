@@ -1,72 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calm Your Anxiety</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anxiety Support Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <nav>
-      <div class="logo">
-        <a href="#">Calm Your Anxiety</a>
-      </div>
-      <ul>
-        <li><a href="#about">About Anxiety</a></li>
-        <li><a href="#breathing">Breathing Guide</a></li>
-        <li><a href="#mindfulness">Meditation Guide</a></li>
-        <li><a href="#resources">Resources</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <h1>Anxiety Support Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Anxiety</a></li>
+                <li><a href="#breathing">Breathing Exercise</a></li>
+                <li><a href="#meditation">Meditation Video</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <section class="hero">
-    <h1>Find Your Calm</h1>
-    <p id="affirmation-text">Take a deep breath—you're in a safe space.</p>
-    <a href="#breathing" class="cta-button">Start Breathing Exercise</a>
-  </section>
+    <section id="about">
+        <h2>About Anxiety</h2>
+        <p>Anxiety is a common condition that can feel overwhelming at times. In this portfolio, we explore ways to manage anxiety through breathing exercises, meditation, and useful resources.</p>
+    </section>
 
-  <section id="about" class="about">
-    <h2>Understanding Anxiety</h2>
-    <p>Anxiety is a natural response to stress, but when it feels overwhelming, it can interfere with daily life.</p>
-    <p>Learn about the symptoms, causes, and how you can manage it.</p>
-  </section>
+    <section id="breathing">
+        <h2>Breathing Exercise</h2>
+        <div id="breathing-container">
+            <div id="breathing-circle"></div>
+        </div>
+        <button id="startButton">Start Breathing Exercise</button>
+        <p id="breathing-instruction">Click the button to start your breathing exercise.</p>
+    </section>
 
-  <section id="breathing" class="breathing">
-    <h2>Breathing Exercise</h2>
-    <p>This guided breathing exercise helps calm the mind and body.</p>
+    <section id="meditation">
+        <h2>5-Minute Meditation</h2>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/K9snoHkqNKI" title="5-Minute Meditation for Stress Relief" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
 
-    <p id="breathing-countdown" class="countdown-text">Get ready...</p>
+    <section id="resources">
+        <h2>Helpful Resources</h2>
+        <ul>
+            <li><a href="https://www.anxiety.org/" target="_blank">Anxiety.org - Resources for Coping</a></li>
+            <li><a href="https://adaa.org/" target="_blank">Anxiety and Depression Association of America</a></li>
+            <li><a href="https://www.mentalhealth.gov/" target="_blank">Mental Health.gov</a></li>
+            <li><a href="https://www.headspace.com/" target="_blank">Headspace - Guided Meditation</a></li>
+        </ul>
+    </section>
 
-    <div class="breathing-overlay" id="breathing-overlay">
-      <p class="instructions" id="breathing-instruction">Breathe In...</p>
-    </div>
+    <footer>
+        <p>&copy; 2025 Anxiety Portfolio</p>
+    </footer>
 
-    <div class="breathing-circle" id="breathing-circle">
-      <div class="circle"></div>
-    </div>
-
-    <button id="startBreathingButton" class="cta-button">Start Exercise</button>
-    <button id="stopBreathingButton" class="cta-button" style="display:none;">Stop</button>
-  </section>
-
-  <section id="mindfulness" class="mindfulness">
-    <h2>Guided Meditation</h2>
-    <p>Focus on the present with this short meditation.</p>
-    <a href="https://www.youtube.com/watch?v=YzRUEmqDJd8" target="_blank" class="cta-button">Start Meditation</a>
-  </section>
-
-  <section id="resources" class="resources">
-    <h2>Helpful Resources</h2>
-    <ul>
-      <li><a href="https://www.adaa.org" target="_blank">Anxiety and Depression Association</a></li>
-      <li><a href="https://www.nami.org" target="_blank">National Alliance on Mental Illness</a></li>
-      <li><a href="https://www.samhsa.gov" target="_blank">SAMHSA Mental Health Services</a></li>
-    </ul>
-  </section>
-
+    <script src="script.js"></script>
 </body>
 </html>
