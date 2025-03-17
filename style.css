@@ -1,151 +1,98 @@
-/* General Styles */
-body {
-    font-family: 'Arial', sans-serif;
+/* General reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
     text-align: center;
-    color: #333;
+    padding: 50px;
 }
 
 header {
-    background-color: #00796b;
-    color: white;
-    padding: 20px;
+    margin-bottom: 40px;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5em;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin-top: 10px;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #d32f2f;
+    font-size: 2em;
 }
 
 section {
-    padding: 40px;
-    margin: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
 }
 
-button {
-    background-color: #00796b;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 18px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #004d40;
-}
-
-/* Breathing Exercise Styles */
+/* Breathing circle container */
 #breathing-container {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Breathing circle animation */
+.circle {
+    width: 200px;
     height: 200px;
+    border-radius: 50%;
+    background-color: #66cdaa;
+    animation: breathAnimation 14s infinite ease-in-out;
+}
+
+/* Instructions */
+.instructions {
+    font-size: 1.2em;
+    color: #333;
     margin-top: 20px;
 }
 
-#breathing-circle {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-color: #00796b;
-    transition: transform 4s ease-in-out;
-}
-
-/* Breathing Animation */
-@keyframes breathe {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.3); /* Breathing in (circle enlarges) */
-    }
-    100% {
-        transform: scale(1); /* Breathing out (circle shrinks) */
-    }
-}
-
-/* The circle element for the breathing animation */
-#breathing-circle {
-    width: 150px;
-    height: 150px;
-    background-color: #0099cc;
-    border-radius: 50%;
-    animation: breathe 4s ease-in-out infinite; /* Apply animation immediately */
-    margin: 0 auto;
-}
-
-/* Center the circle within the container */
-#breathing-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-}
-
-/* Video Container */
 .video-container {
     margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-/* Resources Section */
-#resources ul {
+iframe {
+    max-width: 100%;
+    height: 315px;
+}
+
+/* Anxiety info section */
+.anxiety-info {
+    margin-top: 30px;
+}
+
+.anxiety-info ul {
     list-style-type: none;
     padding: 0;
+    font-size: 1.1em;
 }
 
-#resources ul li {
-    margin-bottom: 15px;
+.anxiety-info ul li {
+    margin-bottom: 10px;
 }
 
-#resources ul li a {
-    text-decoration: none;
-    font-size: 18px;
-    color: #00796b;
-    font-weight: bold;
-}
-
-#resources ul li a:hover {
-    color: #d32f2f;
-}
-
-/* Footer */
 footer {
-    padding: 10px;
-    background-color: #00796b;
-    color: white;
     margin-top: 40px;
-    font-size: 14px;
+    font-size: 1em;
+    color: #333;
+}
+
+/* Breathing circle animation keyframes */
+@keyframes breathAnimation {
+    0% {
+        transform: scale(1); /* Normal size */
+    }
+    25% {
+        transform: scale(1.3); /* Inhale (grow) */
+    }
+    50% {
+        transform: scale(1); /* Hold (normal size) */
+    }
+    75% {
+        transform: scale(0.8); /* Exhale (shrink) */
+    }
+    100% {
+        transform: scale(1); /* Normal size */
+    }
 }
