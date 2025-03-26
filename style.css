@@ -1,21 +1,21 @@
-/* General reset */
+/* ========== RESET STYLES ========== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body and global styles */
+/* ========== BODY & GLOBAL STYLES ========== */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #f0f8ff, #e6f7f2); /* Soft gradient for background */
+    background: linear-gradient(135deg, #f0f8ff, #e6f7f2); /* Soft gradient for relaxation */
     text-align: center;
     padding: 50px 20px;
-    color: #333; /* Darker text for better contrast */
-    background-size: cover; /* Ensures background covers the entire area */
+    color: #333; /* High contrast for readability */
+    background-size: cover;
 }
 
-/* Header styles */
+/* ========== HEADER STYLES ========== */
 header {
     margin-bottom: 40px;
 }
@@ -23,51 +23,77 @@ header {
 header h1 {
     font-size: 2.8em;
     font-weight: bold;
-    color: #2e8b57; /* Professional green for a calm vibe */
-    text-transform: uppercase; /* Makes header more formal */
-    letter-spacing: 2px; /* Adds space between letters */
+    color: #12aef1; /* Calming green */
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-/* Section styles */
+/* ========== SECTION STYLES ========== */
 section {
-    margin-bottom: 50px; /* Increased margin for better spacing */
+    margin-bottom: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.7); /* Light background for readability */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
-/* Subtitle styles */
+/* ========== SUBTITLES ========== */
 h2 {
     font-size: 2em;
-    color: #2e8b57; /* Matching color with header */
-    font-weight: 600; /* Make it stand out */
+    color: #e9de19;
+    font-weight: 600;
     margin-bottom: 20px;
-    text-transform: capitalize; /* Capitalizes first letter of each word */
+    text-transform: capitalize;
 }
 
-/* Breathing circle container */
+/* ========== BREATHING CIRCLE ========== */
 #breathing-container {
-    margin-top: 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-/* Breathing circle animation */
 .circle {
     width: 220px;
     height: 220px;
     border-radius: 50%;
-    background-color: #66cdaa; /* Teal color for calmness */
+    background-color: #ebe306;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
     animation: breathAnimation 14s infinite ease-in-out;
 }
 
-/* Instructions text */
+/* Breathing Instructions */
 .instructions {
     font-size: 1.3em;
-    color: #555; /* Slightly lighter color for text */
+    color: #555;
     margin-top: 20px;
-    font-style: italic; /* Adds emphasis to instructions */
+    font-style: italic;
 }
 
-/* Video container */
+/* ========== BREATHING CONTROL BUTTONS ========== */
+.button-container {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #eee31e;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #ec8a14;
+}
+
+/* ========== VIDEO CONTAINER ========== */
 .video-container {
     margin-top: 30px;
 }
@@ -78,16 +104,16 @@ iframe {
     border: none;
 }
 
-/* Anxiety info section */
+/* ========== ANXIETY INFORMATION ========== */
 .anxiety-info {
     margin-top: 50px;
     font-size: 1.1em;
     line-height: 1.6;
-    color: #444; /* Slightly darker color for text */
+    color: #444;
 }
 
 .anxiety-info ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
@@ -97,33 +123,23 @@ iframe {
     text-align: left;
 }
 
-/* Footer styles */
+/* ========== FOOTER ========== */
 footer {
     margin-top: 50px;
     font-size: 1.1em;
-    color: #888; /* Lighter color for footer text */
+    color: #888;
 }
 
-/* Breathing circle animation keyframes */
+/* ========== ANIMATION ========== */
 @keyframes breathAnimation {
-    0% {
-        transform: scale(1); /* Normal size */
-    }
-    25% {
-        transform: scale(1.3); /* Inhale (grow) */
-    }
-    50% {
-        transform: scale(1); /* Hold (normal size) */
-    }
-    75% {
-        transform: scale(0.8); /* Exhale (shrink) */
-    }
-    100% {
-        transform: scale(1); /* Normal size */
-    }
+    0% { transform: scale(1); }
+    25% { transform: scale(1.4); } /* Inhale */
+    50% { transform: scale(1.2); } /* Hold */
+    75% { transform: scale(0.9); } /* Exhale */
+    100% { transform: scale(1); }
 }
 
-/* Media Queries for responsiveness */
+/* ========== RESPONSIVENESS ========== */
 @media (max-width: 768px) {
     body {
         padding: 30px 10px;
