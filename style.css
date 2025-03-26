@@ -8,39 +8,44 @@
 /* ========== BODY & GLOBAL STYLES ========== */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #f0f8ff, #e6f7f2); /* Soft gradient for relaxation */
+    background: linear-gradient(135deg, #f0f8ff, #dff7f3); /* Soft gradient for relaxation */
     text-align: center;
-    padding: 50px 20px;
-    color: #333; /* High contrast for readability */
+    padding: 40px 20px;
+    color: #333;
     background-size: cover;
 }
 
 /* ========== HEADER STYLES ========== */
 header {
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
 header h1 {
-    font-size: 2.8em;
+    font-size: 2.5em;
     font-weight: bold;
-    color: #12aef1; /* Calming green */
+    color: #2c88d9; /* Professional calming blue */
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
 }
 
 /* ========== SECTION STYLES ========== */
 section {
     margin-bottom: 50px;
-    padding: 20px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.7); /* Light background for readability */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 25px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.85); /* Light background for readability */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08); /* Soft shadow for depth */
+    transition: all 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: scale(1.02); /* Subtle effect to enhance interactivity */
 }
 
 /* ========== SUBTITLES ========== */
 h2 {
     font-size: 2em;
-    color: #e9de19;
+    color: #2c88d9;
     font-weight: 600;
     margin-bottom: 20px;
     text-transform: capitalize;
@@ -56,18 +61,18 @@ h2 {
 }
 
 .circle {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    background-color: #ebe306;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-    animation: breathAnimation 14s infinite ease-in-out;
+    background-color: #1db489; /* Calm greenish tone */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    animation: breathAnimation 12s infinite ease-in-out;
 }
 
 /* Breathing Instructions */
 .instructions {
     font-size: 1.3em;
-    color: #555;
+    color: #444;
     margin-top: 20px;
     font-style: italic;
 }
@@ -78,19 +83,19 @@ h2 {
 }
 
 button {
-    background-color: #eee31e;
+    background-color: #1db489;
     color: white;
     border: none;
     padding: 12px 24px;
     font-size: 1.2em;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
     transition: 0.3s ease-in-out;
-    margin: 5px;
+    margin: 8px;
 }
 
 button:hover {
-    background-color: #ec8a14;
+    background-color: #17a074;
 }
 
 /* ========== VIDEO CONTAINER ========== */
@@ -100,61 +105,87 @@ button:hover {
 
 iframe {
     max-width: 100%;
-    height: 315px;
+    height: 320px;
     border: none;
+    border-radius: 8px;
 }
 
 /* ========== ANXIETY INFORMATION ========== */
 .anxiety-info {
-    margin-top: 50px;
+    margin-top: 40px;
     font-size: 1.1em;
-    line-height: 1.6;
+    line-height: 1.7;
     color: #444;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .anxiety-info ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
 }
 
 .anxiety-info ul li {
     margin-bottom: 12px;
-    padding-left: 15px;
-    text-align: left;
+    padding-left: 20px;
+    position: relative;
+    font-size: 1.05em;
+}
+
+/* Bullet points for list */
+.anxiety-info ul li::before {
+    content: "•";
+    color: #1db489;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
 }
 
 /* ========== FOOTER ========== */
 footer {
     margin-top: 50px;
-    font-size: 1.1em;
-    color: #888;
+    font-size: 1em;
+    color: #666;
+    padding: 10px;
+    text-align: center;
 }
 
 /* ========== ANIMATION ========== */
 @keyframes breathAnimation {
     0% { transform: scale(1); }
-    25% { transform: scale(1.4); } /* Inhale */
-    50% { transform: scale(1.2); } /* Hold */
-    75% { transform: scale(0.9); } /* Exhale */
+    25% { transform: scale(1.3); } /* Inhale */
+    50% { transform: scale(1.1); } /* Hold */
+    75% { transform: scale(0.85); } /* Exhale */
     100% { transform: scale(1); }
 }
 
 /* ========== RESPONSIVENESS ========== */
 @media (max-width: 768px) {
     body {
-        padding: 30px 10px;
+        padding: 20px;
     }
 
     header h1 {
-        font-size: 2.2em;
+        font-size: 2em;
     }
 
     h2 {
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
 
     .instructions {
         font-size: 1.1em;
+    }
+
+    .circle {
+        width: 180px;
+        height: 180px;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 10px 20px;
     }
 
     .anxiety-info ul li {
@@ -162,6 +193,31 @@ footer {
     }
 
     footer {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    .circle {
+        width: 160px;
+        height: 160px;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    .anxiety-info {
         font-size: 1em;
+        line-height: 1.5;
     }
 }
